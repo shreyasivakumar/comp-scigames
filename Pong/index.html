@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <title>Pong Game</title>
+   
+    <!-- include an external style sheet -->
+    <link rel="stylesheet" href="pong.css">
+         
+  </head>
+ 
+  <body>
+   
+    <div id="controlpanel">
+   
+      <div onclick="startGame()" id="start" class="controls">Start</div>
+      <div onclick="pauseGame()" id="pause" class="controls">Pause</div>
+      <div onclick="resumeGame()" id="resume" class="controls">Resume</div>
+       <div onclick="stopGame()" id="stop" class="controls">End</div>
+
+    </div>
+
+    <div id="header">
+     
+      <h1 id="title">The Game of Pong</h1>
+      <h2 id="left">Score 1: <span id="score1">0</span>&nbsp;&nbsp;&nbsp;Slow Ball - <span id="slowDown1">1</span></h2>
+      <h2 id="right">Slow Ball - <span id="slowDown2">1</span>&nbsp;&nbsp;&nbsp;Score 2: <span id="score2">0</span></h2>
+
+    </div>  
+   
+    <div id="gameBoard">
+     
+      <div id="paddle1" class="paddle">
+      </div>
+       
+      <div id="ball">        
+      </div>
+       
+      <div id="paddle2" class="paddle">      
+      </div>
+   
+    </div>
+   
+    <!-- lightbox -->
+    <div id="lightbox" class="unhidden"></div>
+           
+    <div id="positionMessage">
+       
+        <div id="boundaryMessage" class="unhidden">
+       
+        <img id="x" src="images/x.png" alt="close" onclick="continueGame()">
+        <h1 id="message" class="titleText">This is the game of Pong!</h1>
+        <p id="message2" class="titleText">Use the W and S keys to move the left paddle and the &#x2B06; and &#x2B07;  keys to move the right paddle! 
+		<br>To pause the game, press the space button.</p>
+        <button id="continue" style="vertical-align:middle" onclick="nextSlide(message, message2)"><span>Next</span></button>        
+        </div>
+       
+    </div>
+     
+    <!-- include an external JavaScript file -->
+    <script src="pong.js"></script>  
+     
+  </body>
+ 
+</html>
