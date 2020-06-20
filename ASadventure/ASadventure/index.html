@@ -1,57 +1,88 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Albert and Simon's Adventures</title>
-    
-    <!-- include an external style sheet -->
-    <link rel="stylesheet" href="style.css">  
-    
-   
-  </head>
-  
-  <body>
-  
-  <div id="gameBoard">
-  
-	<div id="data"></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	
-  </div>
-  
-	<div class ="message" id="lose">You Lose</div>
-    <div class ="message" id="levelup">Next Level...</div>
-	<div class="message" id="win">You Win</div>
-    
-	 <!-- include an external JavaScript file -->
-    <script src="game.js"></script>
-  </body>
-  
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Albert and Simon's Adventures</title>
+	<link rel="icon" type="image/png" href="asimages/horse.png" />
+	<!-- include an external style sheet -->
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+	<div id="gameBoard">
+
+		<div id="data"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+
+	</div>
+	<div id="start">
+		<div class="content">
+			<h1 id="welcome">
+				This is the game of Albert and Simon's Adventure
+			</h1>
+			<p>
+				In this game, Albert (the horse) goes through levels of adventures with his owener Simon! Together they
+				battle
+				Victor (the enemy horse)!
+			</p>
+			<p>Use the arrow keys to navigate through the levels. You must pick up Simon in order to complete the level.
+			</p>
+			<button onclick="loadLevel()"> Start </button>
+		</div>
+	</div>
+
+
+	<div class="message" id="lose">
+		<div class="content">
+			<p>You Lose</p>
+			<button onclick="restartGame()">Restart</button>
+		</div>
+	</div>
+	<div class="message" id="levelup">
+		<div class="content">
+			<p>Next Level...</p>
+		</div>
+	</div>
+	<div class="message" id="win">
+		<div class="content">
+			<p>You Win</p>
+			<button onclick="playAgain()">Play Again!</button>
+		</div>
+	</div>
+
+	<!-- include an external JavaScript file -->
+	<script src="game.js"></script>
+</body>
+
 </html>
